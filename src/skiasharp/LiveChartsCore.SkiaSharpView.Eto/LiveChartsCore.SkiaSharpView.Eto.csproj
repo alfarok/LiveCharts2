@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
@@ -32,7 +32,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Eto.SkiaDraw" Version="0.2.0" />
+    <Reference Include="Eto">
+      <HintPath>..\..\..\..\..\..\.nuget\packages\rhinocommon\7.6.21127.19001\lib\net48\Eto.dll</HintPath>
+    </Reference>
+    <Reference Include="Eto.SkiaDraw">
+      <HintPath>..\..\..\..\Eto.SkiaDraw\Eto.SkiaDraw\bin\Debug\netstandard2.0\Eto.SkiaDraw.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp">
+      <HintPath>..\..\..\..\Eto.SkiaDraw\Eto.SkiaDraw\bin\Debug\netstandard2.0\SkiaSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
