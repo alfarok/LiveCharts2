@@ -32,7 +32,7 @@ using LiveChartsCore.SkiaSharpView.Drawing;
 namespace LiveChartsCore.SkiaSharpView.Eto;
 
 /// <inheritdoc cref="IChartTooltip{TDrawingContext}" />
-public class DefaultTooltip : Form, IChartTooltip<SkiaSharpDrawingContext>
+public class DefaultTooltip : FloatingForm, IChartTooltip<SkiaSharpDrawingContext>
 {
     private IEnumerable<ChartPoint>? _tooltipPoints;
     private Chart<SkiaSharpDrawingContext>? _chart;
@@ -48,7 +48,7 @@ public class DefaultTooltip : Form, IChartTooltip<SkiaSharpDrawingContext>
         WindowStyle = WindowStyle.None;
         ShowInTaskbar = false;
         Resizable = false;
-        //AutoSize = true;
+        AutoSize = true;
     }
 
     void IChartTooltip<SkiaSharpDrawingContext>.Show(IEnumerable<ChartPoint> tooltipPoints, Chart<SkiaSharpDrawingContext> chart)
